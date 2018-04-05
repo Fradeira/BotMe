@@ -41,4 +41,6 @@
 **/Entity/*~
 
 /.idea/*
-/vendor/*
+/.idea/workspace.xml
+/Symfony/vendor/*
+/Symfony/var/*
