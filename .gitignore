@@ -42,5 +42,6 @@
 
 /.idea/*
 /.idea/workspace.xml
-/Symfony/vendor/*
-/Symfony/var/*
+/docker_sf/vendor/*
+/docker_sf/var/*
+/docker_sf/.idea/*

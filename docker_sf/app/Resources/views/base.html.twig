@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+    <html lang="en">
+
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        {# HERE = REFERENCEMENT #}
+
+        <title>{% block title %}BotMe !{% endblock %}</title>
+        {% block stylesheets %}{% endblock %}
+        <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
+
+        <!-- Material Design Icons -->
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+        <!-- Font Awesome -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+
+        <!-- Bootstrap core CSS -->
+        <link href="{{ asset("assets/css/bootstrap.min.css") }}" rel="stylesheet">
+
+        <!-- Material Design Bootstrap Compiled -->
+        <link href="{{ asset("assets/css/mdb.css") }}" rel="stylesheet">
+
+        <!-- Template style -->
+        <link href="{{ asset('assets/css/style.css') }}" rel="stylesheet">
+
+    </head>
+
+    <body>
+        <!--Navigation-->
+        <nav class="navbar navbar-fixed-top z-depth-1" role="navigation">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                </div>
+
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                    <ul class="nav navbar-nav navbar-left">
+                        <li><a href="#carousel-bg" class="waves-effect waves-light"><i class="fa fa-home"></i> Home</a></li>
+                        <li><a href="#about-me" class="waves-effect waves-light">About me</a></li>
+                        <li><a href="#portfolio" class="waves-effect waves-light">Portfolio</a></li>
+                        <li><a href="#testimonials" class="waves-effect waves-light">Our team</a></li>
+                        <li><a href="#blog" class="waves-effect waves-light">Blog</a></li>
+                        <li><a href="#contact" class="waves-effect waves-light">Contact</a></li>
+
+                    </ul>
+
+                </div>
+            </div>
+        </nav>
+        <!--/.Navigation-->
+        {% block body %}{% endblock %}
+        {% block javascripts %}{% endblock %}
+
+        <!-- Footer with social buttons -->
+        <footer class="page-footer blue-grey">
+            <div class="container-fluid">
+                <div class="row text-center wow fadeIn">
+                    <h4 class="white-text">Find us on social media</h4>
+                    <a href="https://www.facebook.com/mdbootstrap" class="btn-sm-full fb-bg rectangle waves-effect waves-light"><i class="fa fa-facebook"> </i> <span>Facebook</span> </a>
+                    <a href="https://twitter.com/MDBootstrap" class="btn-sm-full tw-bg rectangle waves-effect waves-light"><i class="fa fa-twitter"> </i> <span>Twitter</span></a>
+                    <a class="btn-sm-full git-bg rectangle waves-effect waves-light"><i class="fa fa-github"> </i> <span>Github</span></a>
+                </div>
+            </div>
+            <br>
+            <div class="footer-copyright">
+                <div class="container-fluid text-center">
+                    © <?= date("Y") ?> Copyright
+                    <a class="grey-text text-lighten-4 right">BotMe ❤</a>
+                </div>
+            </div>
+        </footer>
+        <!--/. Footer with social buttons -->
+
+        <!--/. Parallax -->
+
+
+        <!-- Section: Portfolio -->
+        <!-- JQuery -->
+        <script type="text/javascript" src="{{ asset("assets/js/jquery.min.js") }}"></script>
+
+        <!-- Bootstrap core JavaScript -->
+        <script type="text/javascript" src="{{ asset("assets/js/bootstrap.min.js") }}"></script>
+
+        <!-- Material Design Bootstrap -->
+        <script type="text/javascript" src="{{ asset("assets/js/mdb.js") }}"></script>
+
+        <!-- Smooth scroll -->
+        <script type="text/javascript" src="{{ asset("assets/js/smooth-scroll.js") }}"></script>
+
+        <!-- WOW effect -->
+        <script>
+            new WOW().init();
+        </script>
+
+</html>
