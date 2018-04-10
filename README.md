@@ -23,7 +23,7 @@ Second step, go into your folder and launch docker container :
 docker-compose up -d
 ```
 
-Third step, into docker_sf, launch your symfony server :
+Third step, launch your symfony server :
 
 ```
 php bin/console s:r
