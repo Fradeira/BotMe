@@ -17,13 +17,21 @@ First step, clone our project on your computer :
 git clone https://github.com/Fradeira/BotMe.git
 ```
 
-Second step, launch this project :
+Second step, go into your folder and launch docker container :
+
+```
+docker-compose up -d
+```
+
+Third step, into docker_sf, launch your symfony server :
 
 ```
 php bin/console s:r
 ```
 
-If it doesn't, please go to this help : [Phpgockumentor](https://symfony.com/projects/phpdocumentor)
+Enjoy ! :)
+
+If it doesn't work, please go to this help : [Phpgockumentor](https://symfony.com/projects/phpdocumentor)
 
 ## License
 

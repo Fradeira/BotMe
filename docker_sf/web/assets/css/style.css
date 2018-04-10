@@ -69,7 +69,9 @@ footer.page-footer {
 }
 
 .top-nav-collapse {
-    background-color: #3E4551;
+    /* background-color: #3E4551; */
+    background-color:#335a8666;
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
 }
 
 /* Typography */
@@ -101,7 +103,7 @@ footer.page-footer {
 /* Tiled gallery */
 
 .tiled-gallery .tile-1 {
-    background-image: url(http://mdbootstrap.com/wp-content/uploads/2015/10/kfi5dark.jpg);
+    background-image: url('../img/activities/bat.jpg');
     background-repeat: no-repeat;
     background-size: cover;
 }
@@ -113,19 +115,13 @@ footer.page-footer {
 }
 
 .tiled-gallery .tile-3 {
-    background-image: url(http://mdbootstrap.com/wp-content/uploads/2015/10/moments899.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
-}
-
-.tiled-gallery .tile-4 {
-    background-image: url(http://mdbootstrap.com/wp-content/uploads/2015/10/kids899.jpg);
+    background-image: url('../img/activities/bank.jpg');
     background-repeat: no-repeat;
     background-size: cover;
 }
 
 .tiled-gallery .tile-5 {
-    background-image: url(http://mdbootstrap.com/wp-content/uploads/2015/10/wedding899.jpg);
+    background-image: url('../img/activities/info.jpg');
     background-repeat: no-repeat;
     background-size: cover;
 }
@@ -136,20 +132,8 @@ footer.page-footer {
     background-size: cover;
 }
 
-.tiled-gallery .tile-7 {
-    background-image: url(http://mdbootstrap.com/wp-content/uploads/2015/10/motion899.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
-}
-
 .tiled-gallery .tile-8 {
     background-image: url(http://mdbootstrap.com/wp-content/uploads/2015/10/food899.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
-}
-
-.tiled-gallery .tile-9 {
-    background-image: url(http://mdbootstrap.com/wp-content/uploads/2015/10/emotion28992.jpg);
     background-repeat: no-repeat;
     background-size: cover;
 }
@@ -162,11 +146,11 @@ footer.page-footer {
 
 
 #par-special-offer {
-    background-image: url(http://mdbootstrap.com/wp-content/uploads/2015/10/kfi5dark.jpg);
+    background-image: url('../img/special/spe.jpg');
 }
 
 #blog {
-    background-image: url(http://mdbootstrap.com/wp-content/uploads/2015/10/kfi5dark.jpg);
+    background-image: url('../img/choose_bot/background.jpg');
 }
 
 .parallax .avatar-ws {
@@ -215,4 +199,65 @@ footer.page-footer {
     animation-duration: 4s;
     animation-delay: 0.3s;
 
+}
+
+/* ----- */
+/* OTHER */
+/* ----- */
+.botmecolor{
+    color: #006064;
+}
+
+.testimonial-card {
+    background: #fff;
+}
+
+.input-field .prefix.active{
+    color: #335a8666;
+}
+
+.email-bg{
+    background-color: #335a8666;
+}
+
+input[type=text]:focus:not([readonly])+label,
+input[type=password]:focus:not([readonly])+label,
+input[type=email]:focus:not([readonly])+label,
+input[type=url]:focus:not([readonly])+label,
+input[type=time]:focus:not([readonly])+label,
+input[type=date]:focus:not([readonly])+label,
+input[type=datetime-local]:focus:not([readonly])+label,
+input[type=tel]:focus:not([readonly])+label,
+input[type=number]:focus:not([readonly])+label,
+input[type=search-md]:focus:not([readonly])+label,
+textarea.materialize-textarea:focus:not([readonly])+label {
+    color: #335a8666;
+}
+
+.new-control .fa {
+    background-color: unset;
+}
+
+.navbar{
+    min-height: 74px;
+}
+
+.logoloz{
+    position: absolute;
+    margin-left: 95px;
+    top: 3px;
+}
+
+.navbar .navbar-collapse,
+.navbar .navbar-form {
+    border-color: rgba(0, 0, 0, 0.1);
+    margin-top: 9px;
+}
+
+.section-dark {
+    background-color: #335a8666;
+}
+
+.elegant-card .card-footer {
+    background-color: #335a8666;
 }
