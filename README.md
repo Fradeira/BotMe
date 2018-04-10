@@ -1,3 +1,7 @@
+## Build Status
+[![Build Status](https://travis-ci.org/Fradeira/BotMe.svg?branch=master)]
+(https://travis-ci.org/Fradeira/BotMe)
+
 ## Description
 
 BotMe is a graduation project ESGI 5th year IW.
