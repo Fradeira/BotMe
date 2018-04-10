@@ -374,28 +374,10 @@ mark {
     content: "\2014 \00A0"
 }
 
-.img-fluid {
-    max-width: 100%;
-    height: auto
-}
-
-.img-thumbnail {
-    padding: .25rem;
-    background-color: #fff;
-    border: 1px solid #dee2e6;
-    border-radius: .25rem;
-    max-width: 100%;
-    height: auto
-}
-
 .figure {
     display: inline-block
 }
 
-.figure-img {
-    margin-bottom: .5rem;
-    line-height: 1
-}
 
 .figure-caption {
     font-size: 90%;
@@ -3929,32 +3911,6 @@ tbody.collapse.show {
 .card-header-pills {
     margin-right: -.625rem;
     margin-left: -.625rem
-}
-
-.card-img-overlay {
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    padding: 1.25rem
-}
-
-.card-img {
-    width: 100%;
-    border-radius: calc(.25rem - 1px)
-}
-
-.card-img-top {
-    width: 100%;
-    border-top-left-radius: calc(.25rem - 1px);
-    border-top-right-radius: calc(.25rem - 1px)
-}
-
-.card-img-bottom {
-    width: 100%;
-    border-bottom-right-radius: calc(.25rem - 1px);
-    border-bottom-left-radius: calc(.25rem - 1px)
 }
 
 .card-deck {
@@ -8416,10 +8372,6 @@ a.text-dark:hover {
     thead {
         display: table-header-group
     }
-    img,
-    tr {
-        page-break-inside: avoid
-    }
     h2,
     h3,
     p {
@@ -10072,7 +10024,7 @@ section .contact {
 .md-pills .nav-link.active,
 .md-pills .show>.nav-link,
 .mdb-autocomplete-wrap,
-.media .media-left img,
+.media .media-left,
 .modal-dialog.cascading-modal .modal-c-tabs .nav-tabs,
 .modal-dialog.modal-notify .modal-header,
 .navbar,
@@ -10941,8 +10893,8 @@ section .contact {
 .colorful-select .dropdown-content li a:hover,
 .colorful-select .dropdown-content li span:hover,
 .hoverable:hover,
-.modal-dialog.cascading-modal.modal-avatar .modal-header img,
-.testimonial-carousel .testimonial .avatar img,
+.modal-dialog.cascading-modal.modal-avatar .modal-header,
+.testimonial-carousel .testimonial .avatar,
 .z-depth-2 {
     box-shadow: 0 8px 17px 0 rgba(0, 0, 0, .2), 0 6px 20px 0 rgba(0, 0, 0, .19)
 }
@@ -10996,9 +10948,8 @@ a:not([href]):not([tabindex]):hover {
     text-decoration: none
 }
 
-.img-fluid,
 .modal-dialog.cascading-modal.modal-avatar .modal-header,
-.section-blog-fw .view img,
+.section-blog-fw .view,
 .video-fluid {
     max-width: 100%;
     height: auto
@@ -11423,16 +11374,7 @@ h6 {
     background-size: cover
 }
 
-.view .mask {
-    position: absolute;
-    top: 0;
-    overflow: hidden;
-    width: 100%;
-    height: 100%;
-    background-attachment: fixed
-}
-
-.view img,
+.view,
 .view video {
     position: relative;
     display: block
@@ -11463,13 +11405,13 @@ h6 {
     opacity: 1
 }
 
-.zoom img,
+.zoom,
 .zoom video {
     -webkit-transition: all .2s linear;
     transition: all .2s linear
 }
 
-.zoom:hover img,
+.zoom:hover,
 .zoom:hover video {
     -webkit-transform: scale(1.1);
     -ms-transform: scale(1.1);
@@ -17062,10 +17004,6 @@ a.waves-light {
     box-shadow: none
 }
 
-.card img {
-    border-radius: .25rem .25rem 0 0
-}
-
 .card .card-body {
     position: relative
 }
@@ -17639,7 +17577,7 @@ body.scrollable {
     margin: -6rem 0 -1rem
 }
 
-.modal-dialog.cascading-modal.modal-avatar .modal-header img {
+.modal-dialog.cascading-modal.modal-avatar .modal-header {
     width: 130px;
     margin-left: auto;
     margin-right: auto
@@ -19924,7 +19862,7 @@ html [type=button] {
     perspective: 800px
 }
 
-.card-wrapper img {
+.card-wrapper {
     max-width: 100%
 }
 
@@ -19941,7 +19879,7 @@ html [type=button] {
     height: 50%
 }
 
-.card-wrapper .card-up img {
+.card-wrapper .card-up {
     min-width: 400px
 }
 
@@ -19952,7 +19890,7 @@ html [type=button] {
     width: 120px
 }
 
-.card-wrapper .avatar img {
+.card-wrapper .avatar {
     border: 5px solid #fff;
     background: none repeat scroll 0 0 #fff;
     width: 100%
@@ -20007,7 +19945,7 @@ html [type=button] {
     border: 5px solid #fff
 }
 
-.testimonial-card .avatar img {
+.testimonial-card .avatar {
     width: 100%
 }
 
@@ -20310,7 +20248,7 @@ html [type=button] {
     padding: 0
 }
 
-.navbar .nav-item.avatar .dropdown-toggle img {
+.navbar .nav-item.avatar .dropdown-toggle {
     height: 35px
 }
 
@@ -20512,7 +20450,7 @@ html [type=button] {
     box-sizing: border-box
 }
 
-.pswp img {
+.pswp {
     max-width: none
 }
 
@@ -21164,13 +21102,13 @@ a.pswp__share--download:hover {
 
 .mdb-lightbox figure .img-fluid,
 .mdb-lightbox figure .modal-dialog.cascading-modal.modal-avatar .modal-header,
-.mdb-lightbox figure .section-blog-fw .view img,
+.mdb-lightbox figure .section-blog-fw .view ,
 .modal-dialog.cascading-modal.modal-avatar .mdb-lightbox figure .modal-header,
-.section-blog-fw .view .mdb-lightbox figure img {
+.section-blog-fw .view .mdb-lightbox figure  {
     display: inline
 }
 
-.mdb-lightbox figure img {
+.mdb-lightbox figure  {
     cursor: -webkit-zoom-in;
     cursor: zoom-in;
     -webkit-transition: opacity .4s;
@@ -21178,7 +21116,7 @@ a.pswp__share--download:hover {
     border-radius: 0
 }
 
-.mdb-lightbox figure img:hover {
+.mdb-lightbox figure {
     opacity: .8
 }
 
