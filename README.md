@@ -1,3 +1,7 @@
+## Getting Started
+
+If you need to contribute our project, your need to read "contributing" file and follow it.
+
 ## Build Status
 [![Build Status](https://travis-ci.org/Fradeira/BotMe.svg?branch=master)]
 (https://travis-ci.org/Fradeira/BotMe)
