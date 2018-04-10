@@ -1,3 +1,7 @@
+## Build Status
+[![Build Status](https://travis-ci.org/Fradeira/BotMe.svg?branch=master)]
+(https://travis-ci.org/Fradeira/BotMe)
+
 ## Description
 
 BotMe is a graduation project ESGI 5th year IW.
@@ -19,7 +23,7 @@ Second step, go into your folder and launch docker container :
 docker-compose up -d
 ```
 
-Third step, into docker_sf, launch your symfony server :
+Third step, launch your symfony server :
 
 ```
 php bin/console s:r
