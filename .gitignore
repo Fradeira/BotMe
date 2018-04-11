@@ -42,6 +42,6 @@
 
 /.idea/*
 /.idea/workspace.xml
-/vendor/
-/var/
-/.idea/
+/vendor/*
+/var/*
+/.idea/*
