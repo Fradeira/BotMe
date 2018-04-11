@@ -19,7 +19,7 @@ class DefaultController extends Controller
     }
 
     /**
-     * @Route("/", name="basicConsole")
+     * @Route("/basicConsole", name="basicConsole")
      */
     public function basicConsoleAction(Request $request)
     {
