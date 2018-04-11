@@ -42,6 +42,6 @@
 
 /.idea/*
 /.idea/workspace.xml
-/docker_sf/vendor/*
-/docker_sf/var/*
-/docker_sf/.idea/*
+/vendor/
+/var/
+/.idea/
