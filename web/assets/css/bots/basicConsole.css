@@ -1,0 +1,182 @@
+.samples{
+    font-size: 14px;
+}
+
+.section-dark{
+    padding-top: 7%;
+    padding-bottom: 1%;
+}
+
+.intro {
+    border-radius: 5px;
+    padding: 2%;
+    margin-top: 15%;
+}
+
+.chatbot {
+    font-family: "tahoma";
+    width: 100%;
+    height: 68%;
+    bottom: 10%;
+    right: 2%;
+    background: rgba(0, 0, 0, 0.13);
+    border-radius: 6px;
+    padding: 0;
+    z-index: 10;
+}
+
+#zone_chat_1 {
+    height: 500px;
+    margin-top: 4%;
+    margin-bottom: 5%;
+    overflow-y: scroll;
+}
+
+#zone_chat_1::-webkit-scrollbar {
+    display: none;
+}
+
+#zone_chat_1 p.user_style {
+    padding: 6px;
+    background: rgba(237, 0, 0, 0.80);
+    font-family: "tahoma";
+    border-radius: 8px;
+    color: rgb(5, 16, 57);
+    font-weight: bold;
+    font-size: 12px;
+    overflow: hidden;
+    width: 70%;
+    float: right;
+}
+
+#zone_chat_1 p.bot_style {
+    font-family: "tahoma";
+    padding: 6px;
+    background: rgba(3, 12, 47, 0.93);
+    border-radius: 8px;
+    color: rgb(255, 255, 255);
+    font-weight: bold;
+    font-size: 12px;
+    overflow: hidden;
+    width: 70%;
+    float: left;
+}
+
+/*#formulaire_chat{
+  padding-top: 14px;
+}*/
+
+#formulaire_chat .btn {
+    border-radius: 4px;
+    width: 60%;
+    background-color: #ed0000;
+    border: 1px solid #ed0000;
+}
+
+#formulaire_chat .btn:hover {
+    background-color: #ed0001;
+}
+
+.iconeTry i {
+    font-size: 75px;
+    padding-bottom: 20px;
+    color: #ed0000;
+}
+
+.sgu {
+    font-size: 10px;
+    left: 15px;
+    color: #fff;
+}
+
+*::selection {
+    background-color: #ccaa89;
+    color: #fff;
+}
+
+.insertBillet {
+    color: #333;
+    border-radius: 10px;
+    padding: 10px 0px;
+}
+
+.billet {
+    border: 1px solid rgba(5, 16, 57, 0.7);
+    height: 280px;
+    border-radius: 7px;
+    box-shadow: 0 0 5px 0px #333;
+    background: #ffffffd6;
+}
+
+.billet h4 {
+    color: #333;
+    margin: 0;
+    padding-top: 5px;
+    font-size: 18px;
+}
+
+.billet span {
+    color: #333;
+}
+
+.billet table {
+    color: #333;
+    margin-top: 20px;
+}
+
+.billet td {
+    padding: 0 9px 0 8px;
+}
+
+.billet .strong {
+    font-weight: bold;
+}
+
+.air {
+    width: 20%;
+    float: right;
+    right: 3%;
+    top: 4%;
+    position: absolute;
+}
+
+.code {
+    width: 20%;
+    float: right;
+    right: 2%;
+    top: 4%;
+    position: absolute;
+}
+
+.carousel-indicators li:hover {
+    cursor: pointer;
+}
+
+.toz {
+    display: none;
+    font-size: 30px;
+    color: #dd2125;
+    position: absolute;
+    bottom: 0;
+}
+
+@media screen and (min-width: 1371px) and (max-width: 1500px) {
+    #zone_chat_1 {
+        height: 386px;
+    }
+}
+
+@media screen and (max-width: 1370px) and (min-width: 250px) {
+    .chatbot {
+        width: 42%;
+    }
+    #zone_chat_1 {
+        height: 280px;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .chatbot {
+        width: 95%;
+    }
+}

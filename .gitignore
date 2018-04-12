@@ -45,3 +45,4 @@
 /vendor/*
 /var/*
 /.idea/*
+/node_modules/*

@@ -30,5 +30,18 @@ $(document).ready(function () {
         $("#connect").hide();
         $("#mdpmiss").toggle("slow");
     });
+
+    function echap() {
+        $("#signup").fadeOut('slow');
+        $("#connect").fadeOut('slow');
+        $("#mdpmiss").fadeOut('slow');
+    }
+
+    document.onkeydown = function (e) {
+        var keyCode = e.keyCode;
+        if (keyCode == 27) {
+            echap();
+        }
+    };
 });
 
