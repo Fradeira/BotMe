@@ -43,5 +43,13 @@ $(document).ready(function () {
             echap();
         }
     };
+
+    setInterval(function () { 
+        $('.discover').addClass('infinite');
+    }, 2000);
+
+    setInterval(function () {
+        $('.discover').removeClass('infinite');
+    }, 1500);
 });
 

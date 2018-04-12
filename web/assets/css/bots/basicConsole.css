@@ -38,7 +38,7 @@
 
 #zone_chat_1 p.user_style {
     padding: 6px;
-    background: rgba(237, 0, 0, 0.80);
+    background: rgba(0, 145, 237, 0.38);
     font-family: "tahoma";
     border-radius: 8px;
     color: rgb(5, 16, 57);
@@ -52,7 +52,7 @@
 #zone_chat_1 p.bot_style {
     font-family: "tahoma";
     padding: 6px;
-    background: rgba(3, 12, 47, 0.93);
+    background: rgba(3, 24, 47, 0.83);
     border-radius: 8px;
     color: rgb(255, 255, 255);
     font-weight: bold;
@@ -69,24 +69,26 @@
 #formulaire_chat .btn {
     border-radius: 4px;
     width: 60%;
-    background-color: #ed0000;
-    border: 1px solid #ed0000;
+    background-color: #335a86b3;
+    border: 1px solid #335a86b3;
 }
 
 #formulaire_chat .btn:hover {
-    background-color: #ed0001;
+    background-color: #335a86;
 }
 
 .iconeTry i {
     font-size: 75px;
     padding-bottom: 20px;
-    color: #ed0000;
+    color: #335a86b3;
 }
 
 .sgu {
     font-size: 10px;
     left: 15px;
     color: #fff;
+    float: left;
+    padding-top: 14px;
 }
 
 *::selection {
@@ -155,7 +157,7 @@
 .toz {
     display: none;
     font-size: 30px;
-    color: #dd2125;
+    color: #335a86b3;
     position: absolute;
     bottom: 0;
 }
@@ -179,4 +181,41 @@
     .chatbot {
         width: 95%;
     }
+}
+
+.card img.rounded-circle {
+    border-radius: 50%;
+}
+
+#bot-console{
+    background: #f3eeee;
+}
+
+.nopadding{
+    padding: 0;
+}
+
+.little{
+    font-size: 15px !important;
+}
+
+.blackText{
+    color: #716b6b !important;
+}
+
+.card-header:first-child {
+    border-radius: calc(.25rem - 1px) calc(.25rem - 1px) 0 0;
+}
+
+.card-header {
+    padding: .75rem 1.25rem;
+    margin-bottom: 0;
+    background-color: rgba(0, 0, 0, .03);
+    border-bottom: 1px solid rgba(0, 0, 0, .125);
+}
+
+.card {
+    border: 0;
+    border-radius: .25rem;
+    font-weight: 400;
 }
