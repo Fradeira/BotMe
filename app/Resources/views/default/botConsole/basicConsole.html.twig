@@ -1,0 +1,90 @@
+{% extends 'baseBotConsole.html.twig' %} 
+
+{% block body %}
+    <section class="section-dark" id="bot-console-title">
+        <h3 class="wow fadeIn">Découvrez notre Bot Console</h3>
+    </section>
+    <section class="parallax" id="bot-console">
+        <div class="container text-center">
+            <div class="col-md-12">
+                <div class="col-md-6">
+                    <!-- CHATBOT -->
+                    <div class="col-lg-12 col-md-12 chatbot">
+                        <div class="col-md-12">
+                            <div id="zone_chat_1">
+                                <!-- INCREMENTATION DU DIALOGUE -->
+                                <i class='fa fa-spinner toz' id="toz"></i>
+                            </div>
+                            <div id="zone_chat_2">
+                                <!-- INCREMENTATION DU DIALOGUE -->
+                            </div>
+                        </div>
+                        <div class="col-md-12">
+                            <form action="/" method="post" id="formulaire_chat" alt_salon="1">
+                                <!-- Ajouter alt_user="nomUser" pour automatiser selon le vrai nom-->
+                                <label for="textareaBasic">Votre message</label>
+                                <textarea type="text" id="message" name="message" class="form-control md-textarea" rows="3" autofocus required style="margin-bottom:2%;font-size:12px;background-color:#fff;border-radius: 4px;padding: 5px;"></textarea>
+                                <input type="submit" id="envoi_message" value="Envoyer" class="btn" />
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <h3 class="wow fadeIn blackText">Exemple d'utilisation</h3>
+                    <div class="col-md-12 blackText">
+                        <p class="text-left samples">
+                            Le but de ce bot est de récuperer des billets d'avion depuis l'API d'Air France. A la fin de votre demande, le bot vous enverra
+                            dans un caroussel, des billets d'avion avec les informations recues d'Air France.
+                        </p>
+                        <br>
+                        <p class="text-left samples">
+                            L'utilisation de celui-ci est très simple. Lorsqu'un element est manquant pour l'otention d'un billet,
+                            alors cet element sera demandé. Vous avez la possibilité de :
+                            <br>
+                            <br>
+                    </div>
+                    <div class="col-sm-12 nopadding">
+                        <div class="card blackText">
+                            <div class="card-header black-text" style="font-family: 'tahoma';">
+                                Ecriture en phrase compléte
+                            </div>
+                            <div class="card-body">
+                                <p class="card-text little">
+                                    <br>
+                                    <i class="fa fa-quote-left"></i>
+                                    Je souhaiterais acheter un billet pour le 28 mai de Paris a Barcelone
+                                    <br>
+                                    <i class="fa fa-quote-left"></i>
+                                    Je veux voyager de Paris a Londres pour le 12 Aout en classe business
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-12 nopadding">
+                        <div class="card blackText">
+                            <div class="card-header black-text" style="font-family: 'tahoma';">
+                                Ecriture en "cascade"
+                            </div>
+                            <div class="card-body">
+                                <p class="card-text little">
+                                    <br>
+                                    <i class="fa fa-quote-left"></i>
+                                    Bonjour
+                                    <br>
+                                    <i class="fa fa-quote-left"></i>
+                                    je veux partir de Paris
+                                    <br>
+                                    <i class="fa fa-quote-left"></i>
+                                    Barcelone
+                                    <br>
+                                    <i class="fa fa-quote-left"></i>
+                                    15 juillet
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+{% endblock %}

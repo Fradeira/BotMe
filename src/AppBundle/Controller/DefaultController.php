@@ -23,7 +23,7 @@ class DefaultController extends Controller
      */
     public function basicConsoleAction(Request $request)
     {
-        return $this->render('default/basicConsole.html.twig', [
+        return $this->render('default/botConsole/basicConsole.html.twig', [
             'base_dir' => realpath($this->getParameter('kernel.project_dir')).DIRECTORY_SEPARATOR,
         ]);
     }
