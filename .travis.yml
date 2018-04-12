@@ -41,10 +41,6 @@ install:
   - php bin/console doctrine:schema:create --env=test
   #- php bin/console doctrine:fixtures:load -n --env=test
 
-# Run script
-#script:
- # - phpunit
-
 deploy:
   provider: heroku
   api_key:
