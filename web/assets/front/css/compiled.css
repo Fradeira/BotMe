@@ -5266,208 +5266,6 @@ button.close {
     color: #212529
 }
 
-.carousel {
-    position: relative
-}
-
-.carousel-inner {
-    position: relative;
-    width: 100%;
-    overflow: hidden
-}
-
-.carousel-item {
-    position: relative;
-    display: none;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
-    width: 100%;
-    transition: -webkit-transform .6s ease;
-    transition: transform .6s ease;
-    transition: transform .6s ease, -webkit-transform .6s ease;
-    -webkit-backface-visibility: hidden;
-    backface-visibility: hidden;
-    -webkit-perspective: 1000px;
-    perspective: 1000px
-}
-
-.carousel-item-next,
-.carousel-item-prev,
-.carousel-item.active {
-    display: block
-}
-
-.carousel-item-next,
-.carousel-item-prev {
-    position: absolute;
-    top: 0
-}
-
-.carousel-item-next.carousel-item-left,
-.carousel-item-prev.carousel-item-right {
-    -webkit-transform: translateX(0);
-    transform: translateX(0)
-}
-
-@supports ((-webkit-transform-style:preserve-3d) or (transform-style:preserve-3d)) {
-    .carousel-item-next.carousel-item-left,
-    .carousel-item-prev.carousel-item-right {
-        -webkit-transform: translate3d(0, 0, 0);
-        transform: translate3d(0, 0, 0)
-    }
-}
-
-.active.carousel-item-right,
-.carousel-item-next {
-    -webkit-transform: translateX(100%);
-    transform: translateX(100%)
-}
-
-@supports ((-webkit-transform-style:preserve-3d) or (transform-style:preserve-3d)) {
-    .active.carousel-item-right,
-    .carousel-item-next {
-        -webkit-transform: translate3d(100%, 0, 0);
-        transform: translate3d(100%, 0, 0)
-    }
-}
-
-.active.carousel-item-left,
-.carousel-item-prev {
-    -webkit-transform: translateX(-100%);
-    transform: translateX(-100%)
-}
-
-@supports ((-webkit-transform-style:preserve-3d) or (transform-style:preserve-3d)) {
-    .active.carousel-item-left,
-    .carousel-item-prev {
-        -webkit-transform: translate3d(-100%, 0, 0);
-        transform: translate3d(-100%, 0, 0)
-    }
-}
-
-.carousel-control-next,
-.carousel-control-prev {
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
-    justify-content: center;
-    width: 15%;
-    color: #fff;
-    text-align: center;
-    opacity: .5
-}
-
-.carousel-control-next:focus,
-.carousel-control-next:hover,
-.carousel-control-prev:focus,
-.carousel-control-prev:hover {
-    color: #fff;
-    text-decoration: none;
-    outline: 0;
-    opacity: .9
-}
-
-.carousel-control-prev {
-    left: 0
-}
-
-.carousel-control-next {
-    right: 0
-}
-
-.carousel-control-next-icon,
-.carousel-control-prev-icon {
-    display: inline-block;
-    width: 20px;
-    height: 20px;
-    background: transparent no-repeat center center;
-    background-size: 100% 100%
-}
-
-.carousel-control-prev-icon {
-    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23fff' viewBox='0 0 8 8'%3E%3Cpath d='M5.25 0l-4 4 4 4 1.5-1.5-2.5-2.5 2.5-2.5-1.5-1.5z'/%3E%3C/svg%3E")
-}
-
-.carousel-control-next-icon {
-    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23fff' viewBox='0 0 8 8'%3E%3Cpath d='M2.75 0l-1.5 1.5 2.5 2.5-2.5 2.5 1.5 1.5 4-4-4-4z'/%3E%3C/svg%3E")
-}
-
-.carousel-indicators {
-    position: absolute;
-    right: 0;
-    bottom: 10px;
-    left: 0;
-    z-index: 15;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
-    justify-content: center;
-    padding-left: 0;
-    margin-right: 15%;
-    margin-left: 15%;
-    list-style: none
-}
-
-.carousel-indicators li {
-    position: relative;
-    -webkit-box-flex: 0;
-    -ms-flex: 0 1 auto;
-    flex: 0 1 auto;
-    width: 30px;
-    height: 3px;
-    margin-right: 3px;
-    margin-left: 3px;
-    text-indent: -999px;
-    background-color: rgba(255, 255, 255, .5)
-}
-
-.carousel-indicators li::before {
-    position: absolute;
-    top: -10px;
-    left: 0;
-    display: inline-block;
-    width: 100%;
-    height: 10px;
-    content: ""
-}
-
-.carousel-indicators li::after {
-    position: absolute;
-    bottom: -10px;
-    left: 0;
-    display: inline-block;
-    width: 100%;
-    height: 10px;
-    content: ""
-}
-
-.carousel-indicators .active {
-    background-color: #fff
-}
-
-.carousel-caption {
-    position: absolute;
-    right: 15%;
-    bottom: 20px;
-    left: 15%;
-    z-index: 10;
-    padding-top: 20px;
-    padding-bottom: 20px;
-    color: #fff;
-    text-align: center
-}
-
 .align-baseline {
     vertical-align: baseline !important
 }
@@ -9805,7 +9603,6 @@ a.text-dark:hover {
     background-color: rgba(0, 0, 0, .7)
 }
 
-.carousel-thumbnails .carousel-indicators .active,
 .picker__box .picker__header .picker__select--month.browser-default,
 .picker__box .picker__header .picker__select--year.browser-default,
 .picker__list-item,
@@ -10888,7 +10685,6 @@ section .contact {
 .colorful-select .dropdown-content li span:hover,
 .hoverable:hover,
 .modal-dialog.cascading-modal.modal-avatar .modal-header,
-.testimonial-carousel .testimonial .avatar,
 .z-depth-2 {
     box-shadow: 0 8px 17px 0 rgba(0, 0, 0, .2), 0 6px 20px 0 rgba(0, 0, 0, .19)
 }
@@ -10944,8 +10740,7 @@ a:disabled:hover {
 
 .card .card-circle,
 .flex-center,
-.section.team-section .avatar,
-.testimonial-carousel .testimonial .avatar {
+.section.team-section .avatar{
     display: -webkit-box;
     display: -webkit-flex;
     display: -ms-flexbox;
@@ -10963,29 +10758,25 @@ a:disabled:hover {
 
 .card .card-circle p,
 .flex-center p,
-.section.team-section .avatar p,
-.testimonial-carousel .testimonial .avatar p {
+.section.team-section .avatar p
     margin: 0
 }
 
 .card .card-circle ul,
 .flex-center ul,
-.section.team-section .avatar ul,
-.testimonial-carousel .testimonial .avatar ul {
+.section.team-section .avatar ul
     text-align: center
 }
 
 .card .card-circle ul li,
 .flex-center ul li,
-.section.team-section .avatar ul li,
-.testimonial-carousel .testimonial .avatar ul li {
+.section.team-section .avatar ul li{
     margin-bottom: 1rem
 }
 
 .card .card-circle ul li:last-of-type,
 .flex-center ul li:last-of-type,
-.section.team-section .avatar ul li:last-of-type,
-.testimonial-carousel .testimonial .avatar ul li:last-of-type {
+.section.team-section .avatar ul li:last-of-type{
     margin-bottom: 0
 }
 
@@ -17359,67 +17150,6 @@ body.scrollable {
     }
 }
 
-.carousel .carousel-control-next-icon,
-.carousel .carousel-control-prev-icon {
-    width: 2.25rem;
-    height: 2.25rem
-}
-
-.carousel .carousel-control-prev-icon {
-    background-image: url(../img/svg/arrow_left.svg)
-}
-
-.carousel .carousel-control-next-icon {
-    background-image: url(../img/svg/arrow_right.svg)
-}
-
-.carousel .carousel-indicators li {
-    width: .625rem;
-    height: .625rem;
-    border-radius: 50%;
-    cursor: pointer
-}
-
-.carousel-fade .carousel-item {
-    opacity: 0;
-    -webkit-transition-duration: .6s;
-    transition-duration: .6s;
-    -webkit-transition-property: opacity;
-    transition-property: opacity
-}
-
-.carousel-fade .carousel-item-next.carousel-item-left,
-.carousel-fade .carousel-item-prev.carousel-item-right,
-.carousel-fade .carousel-item.active {
-    opacity: 1
-}
-
-.carousel-fade .carousel-item-left.active,
-.carousel-fade .carousel-item-right.active {
-    opacity: 0
-}
-
-.carousel-fade .carousel-item-left.active,
-.carousel-fade .carousel-item-next,
-.carousel-fade .carousel-item-prev,
-.carousel-fade .carousel-item-prev.active,
-.carousel-fade .carousel-item.active {
-    -webkit-transform: translateX(0);
-    -ms-transform: translateX(0);
-    transform: translateX(0)
-}
-
-@supports (transform-style:preserve-3d) {
-    .carousel-fade .carousel-item-left.active,
-    .carousel-fade .carousel-item-next,
-    .carousel-fade .carousel-item-prev,
-    .carousel-fade .carousel-item-prev.active,
-    .carousel-fade .carousel-item.active {
-        -webkit-transform: translate3d(0, 0, 0);
-        transform: translate3d(0, 0, 0)
-    }
-}
-
 .md-form {
     position: relative;
     margin-top: 1.5rem
@@ -22130,110 +21860,6 @@ button.mdb-autocomplete-clear svg {
     padding: .3rem .6rem
 }
 
-.carousel-multi-item {
-    margin-bottom: 100px
-}
-
-@media (min-width:768px) {
-    .carousel-multi-item .col-md-4 {
-        float: left;
-        width: 33.333333%;
-        max-width: 100%
-    }
-}
-
-.carousel-multi-item .carousel-item-next,
-.carousel-multi-item .carousel-item-prev,
-.carousel-multi-item .carousel-item.active {
-    display: block
-}
-
-.carousel-multi-item .carousel-indicators li {
-    height: 20px;
-    width: 20px;
-    max-width: 20px;
-    background-color: #4285f4;
-    margin-bottom: -60px
-}
-
-.carousel-multi-item .carousel-indicators .active {
-    height: 25px;
-    width: 25px;
-    max-width: 25px;
-    background-color: #4285f4;
-    border-radius: 50%
-}
-
-.carousel-multi-item .controls-top {
-    text-align: center;
-    margin-bottom: 30px
-}
-
-.carousel-multi-item .controls-top .btn-floating {
-    background: #4285f4
-}
-
-.carousel-multi-item .carousel-indicators {
-    margin-bottom: -2em
-}
-
-.carousel-multi-item .card {
-    margin: 1px
-}
-
-.carousel-multi-item .card-cascade.narrower {
-    margin-top: 20px;
-    margin-bottom: 5px
-}
-
-@media only screen and (max-width:992px) {
-    .carousel-multi-item .carousel-indicators li {
-        margin-bottom: -30px
-    }
-}
-
-.carousel-thumbnails {
-    margin-bottom: 80px
-}
-
-.carousel-thumbnails .carousel-indicators {
-    margin-bottom: -75px;
-    position: absolute
-}
-
-.carousel-thumbnails .carousel-indicators li {
-    height: auto;
-    max-width: 100px;
-    width: 100px;
-    border: none
-}
-
-.carousel-thumbnails .carousel-indicators .active {
-    height: auto;
-    width: auto;
-    opacity: .5
-}
-
-.carousel-thumbnails .carousel-indicators img {
-    max-width: 100px;
-    height: 50px;
-    overflow: hidden;
-    display: block
-}
-
-@media only screen and (max-width:600px) {
-    .carousel-thumbnails {
-        margin-bottom: 60px
-    }
-    .carousel-thumbnails .carousel-indicators {
-        margin-bottom: -60px
-    }
-    .carousel-thumbnails .carousel-indicators img {
-        max-width: 50px;
-        height: 25px
-    }
-}
-
 .stepper li a {
     padding: 24px;
     font-size: 14px;
@@ -23667,12 +23293,6 @@ button.toast-close-button {
     background-color: #fff
 }
 
-.white-skin .carousel-multi-item .carousel-indicators li,
-.white-skin .carousel-multi-item .carousel-indicators li.active,
-.white-skin .carousel-multi-item .controls-top>a {
-    background-color: #4285f4
-}
-
 .white-skin .card-header,
 .white-skin .form-header {
     background-color: #4c8bf5
@@ -23955,12 +23575,6 @@ button.toast-close-button {
 
 .black-skin .top-nav-collapse {
     background-color: #222
-}
-
-.black-skin .carousel-multi-item .carousel-indicators li,
-.black-skin .carousel-multi-item .carousel-indicators li.active,
-.black-skin .carousel-multi-item .controls-top>a {
-    background-color: #2ad1a3
 }
 
 .black-skin .card-header,
@@ -24247,12 +23861,6 @@ button.toast-close-button {
     background-color: #114861
 }
 
-.cyan-skin .carousel-multi-item .carousel-indicators li,
-.cyan-skin .carousel-multi-item .carousel-indicators li.active,
-.cyan-skin .carousel-multi-item .controls-top>a {
-    background-color: #f0b247
-}
-
 .cyan-skin .card-header,
 .cyan-skin .form-header {
     background-color: #f1b650
@@ -24535,12 +24143,6 @@ button.toast-close-button {
 
 .mdb-skin .top-nav-collapse {
     background-color: #243a51
-}
-
-.mdb-skin .carousel-multi-item .carousel-indicators li,
-.mdb-skin .carousel-multi-item .carousel-indicators li.active,
-.mdb-skin .carousel-multi-item .controls-top>a {
-    background-color: #33b5e5
 }
 
 .mdb-skin .card-header,
@@ -24827,12 +24429,6 @@ button.toast-close-button {
     background-color: #7f7e91
 }
 
-.deep-purple-skin .carousel-multi-item .carousel-indicators li,
-.deep-purple-skin .carousel-multi-item .carousel-indicators li.active,
-.deep-purple-skin .carousel-multi-item .controls-top>a {
-    background-color: #ac85f0
-}
-
 .deep-purple-skin .card-header,
 .deep-purple-skin .form-header {
     background-color: #b28ef1
@@ -25115,12 +24711,6 @@ button.toast-close-button {
 
 .navy-blue-skin .top-nav-collapse {
     background-color: #353b50
-}
-
-.navy-blue-skin .carousel-multi-item .carousel-indicators li,
-.navy-blue-skin .carousel-multi-item .carousel-indicators li.active,
-.navy-blue-skin .carousel-multi-item .controls-top>a {
-    background-color: #40c6c6
 }
 
 .navy-blue-skin .card-header,
@@ -25407,12 +24997,6 @@ button.toast-close-button {
     background-color: #535466
 }
 
-.pink-skin .carousel-multi-item .carousel-indicators li,
-.pink-skin .carousel-multi-item .carousel-indicators li.active,
-.pink-skin .carousel-multi-item .controls-top>a {
-    background-color: #9fa0ae
-}
-
 .pink-skin .card-header,
 .pink-skin .form-header {
     background-color: #a5a5b3
@@ -25695,12 +25279,6 @@ button.toast-close-button {
 
 .indigo-skin .top-nav-collapse {
     background-color: #9095aa
-}
-
-.indigo-skin .carousel-multi-item .carousel-indicators li,
-.indigo-skin .carousel-multi-item .carousel-indicators li.active,
-.indigo-skin .carousel-multi-item .controls-top>a {
-    background-color: #fd668c
 }
 
 .indigo-skin .card-header,
@@ -25987,12 +25565,6 @@ button.toast-close-button {
     background-color: #3f5c80
 }
 
-.light-blue-skin .carousel-multi-item .carousel-indicators li,
-.light-blue-skin .carousel-multi-item .carousel-indicators li.active,
-.light-blue-skin .carousel-multi-item .controls-top>a {
-    background-color: #b4c2c9
-}
-
 .light-blue-skin .card-header,
 .light-blue-skin .form-header {
     background-color: #bac7cd
@@ -26275,12 +25847,6 @@ button.toast-close-button {
 
 .grey-skin .top-nav-collapse {
     background-color: #44474b
-}
-
-.grey-skin .carousel-multi-item .carousel-indicators li,
-.grey-skin .carousel-multi-item .carousel-indicators li.active,
-.grey-skin .carousel-multi-item .controls-top>a {
-    background-color: #75c1f0
 }
 
 .grey-skin .card-header,
@@ -27635,69 +27201,6 @@ button.toast-close-button {
 .section .card-wrapper .fa-repeat,
 .section .card-wrapper .fa-undo {
     font-size: 15px
-}
-
-.testimonial-carousel .carousel-control {
-    background-image: none;
-    top: 50%;
-    -webkit-transform: translateY(-35%);
-    -ms-transform: translateY(-35%);
-    transform: translateY(-35%)
-}
-
-.testimonial-carousel .carousel-control:before {
-    font-size: 5rem;
-    color: rgba(0, 0, 0, .6)
-}
-
-.testimonial-carousel .carousel-control:hover:before {
-    color: #000;
-    -webkit-transition: .4s;
-    transition: .4s
-}
-
-.testimonial-carousel .carousel-control.left {
-    left: 6%
-}
-
-.testimonial-carousel .carousel-control.left:before {
-    content: "\2039"
-}
-
-.testimonial-carousel .carousel-control.right {
-    right: 6%
-}
-
-.testimonial-carousel .carousel-control.right:before {
-    content: "\203a"
-}
-
-.testimonial-carousel .testimonial {
-    margin-right: 15%;
-    margin-left: 15%
-}
-
-.testimonial-carousel .testimonial .avatar {
-    margin-bottom: 2rem
-}
-
-.testimonial-carousel .testimonial .avatar img {
-    max-width: 170px
-}
-
-.testimonial-carousel .testimonial h4 {
-    margin-bottom: 1.3rem;
-    font-weight: 500
-}
-
-.testimonial-carousel .testimonial h5 {
-    margin-bottom: .9rem;
-    color: #424242;
-    font-weight: 400
-}
-
-.testimonial-carousel .testimonial p {
-    color: #666
 }
 
 .card-body h3,
