@@ -9,11 +9,11 @@ use Symfony\Component\HttpFoundation\Request;
 class DefaultController extends Controller
 {
     /**
-     * @Route("/", name="homepage")
+     * @Route("/", name="index")
      */
     public function indexAction(Request $request)
     {
-        return $this->render('front/homepage.html.twig', [
+        return $this->render('front/index.html.twig', [
             'base_dir' => realpath($this->getParameter('kernel.project_dir')).DIRECTORY_SEPARATOR,
         ]);
     }
@@ -29,21 +29,11 @@ class DefaultController extends Controller
     }
 
     /**
-     * @Route("/dashboard_v_mlp", name="dashboard_v_mlp")
+     * @Route("/homepage_bot", name="homepage_bot")
      */
-    public function dashboard_v_mlpAction(Request $request)
+    public function homepage_botAction(Request $request)
     {
-        return $this->render('front/version_mlp/dashboard_v_mlp.html.twig', [
-            'base_dir' => realpath($this->getParameter('kernel.project_dir')).DIRECTORY_SEPARATOR,
-        ]);
-    }
-
-    /**
-     * @Route("/v_mlp", name="v_mlp")
-     */
-    public function v_mlpAction(Request $request)
-    {
-        return $this->render('front/version_mlp/v_mlp.html.twig', [
+        return $this->render('interface/views/homepage_bot.html.twig', [
             'base_dir' => realpath($this->getParameter('kernel.project_dir')).DIRECTORY_SEPARATOR,
         ]);
     }
