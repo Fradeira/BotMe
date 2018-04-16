@@ -314,8 +314,11 @@ function checkAeroport(message, point) {
         'tmp': []
     };
     var str = (message.toUpperCase()).split(wordSeparator);
+    var strLow = (message.toLowerCase()).split(wordSeparator);
     var messageLength = str.length;
-
+    console.log("STR FIRST :", str);
+    console.log("STR TWO :", strLow);
+    
     for (var i = 0; i < messageLength; i++) {
         if (locations['departure'].length == 0 || locations['arrival'].length == 0) {
             IATACHECK:
@@ -335,18 +338,28 @@ function checkAeroport(message, point) {
                         continue IATACHECK;
                 }
             }
+
             for (var k = 0; k < airportsNumber; k++) {
-                if (dataStorage.airportsListFr[k][1] != undefined && (dataStorage.airportsListFr[k][1] == str[i])
+                
+                if (dataStorage.airportsListFr[k][1] != undefined && dataStorage.airportsListFr[k][1] == str[i]
                     || dataStorage.airportsListFr[k][2] != undefined && dataStorage.airportsListFr[k][2] == str[i]
                     || dataStorage.airportsListFr[k][3] != undefined && dataStorage.airportsListFr[k][3] == str[i]) {
                     locations[point].push(dataStorage.airportsListFr[k][0]);
+
+                    // console.log("direction :", dataStorage.directionalEntities[strLow[i + 1].toStrLowing().toUpperCase()]);
+                    // console.log("direction :", dataStorage.directionalEntities[strLow[i].toStrLowing().toUpperCase()]);
+                    // console.log("direction :", dataStorage.directionalEntities[strLow[i - 1].toStrLowing().toUpperCase()]);
+                    
                     if (point == 'departure' && remindConfig['arrival'] == "") {
-                        if (str[i + 1] != undefined && dataStorage.directionalEntities[str[i + 1]] != undefined)
-                            direction = str[i + 1].toString();
-                        else if (dataStorage.directionalEntities[str[i]] != undefined)
-                            direction = str[i].toString();
-                        else if (dataStorage.directionalEntities[str[i - 1]] != undefined)
-                            direction = str[i - 1].toString();
+                        for (var o = 0; o < messageLength; o++){
+                            if (strLow[o + 1] != undefined && dataStorage.directionalEntities[strLow[o + 1]] != undefined) {
+                                direction = strLow[o + 1].toString();
+                            } else if (dataStorage.directionalEntities[strLow[o]] != undefined) {
+                                direction = strLow[o].toString();
+                            } else if (dataStorage.directionalEntities[strLow[o - 1]] != undefined) {
+                                direction = strLow[o - 1].toString();
+                            }
+                        }
                         paramSwitch = true;
                     }
                 }
@@ -359,9 +372,13 @@ function checkAeroport(message, point) {
         else
             break;
     }
+    
     locations = determineDirection(locations, dataStorage.directionalEntities[direction]);
     remindConfig['departure'] = locations['departure'];
     remindConfig['arrival'] = locations['arrival'];
+    console.log("DEPART :", locations['departure']);
+    console.log("ARRIVEE :", locations['arrival']);
+    
 }
 //------------------------------------------------------------------------------
 

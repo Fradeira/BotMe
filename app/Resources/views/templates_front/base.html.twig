@@ -10,28 +10,28 @@
 
         <title>{% block title %}BotMe !{% endblock %}</title>
         {% block stylesheets %}{% endblock %}
-        <link rel="icon" type="image/x-icon" href="{{ asset('assets/img/favicon.png') }}" />
+        <link rel="icon" type="image/x-icon" href="{{ asset('assets/front/img/favicon.png') }}" />
 
         <!-- Material Design Icons -->
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-
+        
         <!-- Font Awesome -->
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
 
         <!-- Bootstrap core CSS -->
-        <link href="{{ asset('assets/css/bootstrap.min.css') }}" rel="stylesheet">
+        <link href="{{ asset('assets/front/css/bootstrap.min.css') }}" rel="stylesheet">
 
         <!-- Material Design Bootstrap Compiled -->
-        <link href="{{ asset('assets/css/mdb.css') }}" rel="stylesheet">
+        <link href="{{ asset('assets/front/css/mdb.css') }}" rel="stylesheet">
 
         <!-- Template style -->
-        <link href="{{ asset('assets/css/style.css') }}" rel="stylesheet">
+        <link href="{{ asset('assets/front/css/style.css') }}" rel="stylesheet">
 
         <!-- Form connexion & sign up style -->
-        <link href="{{ asset('assets/css/forms.css') }}" rel="stylesheet">
+        <link href="{{ asset('assets/front/css/forms.css') }}" rel="stylesheet">
         
         <!-- CSS Compiled Mdb -->
-        <link href="{{ asset('assets/css/compiled.css') }}" rel="stylesheet"> 
+        <link href="{{ asset('assets/front/css/compiled.css') }}" rel="stylesheet"> 
 
     </head>
 
@@ -49,7 +49,7 @@
                 </div>
                 
                 <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                    <img src="{{ asset('assets/img/logo.png') }}" alt="BotMe" class="logoloz animated bounce">
+                    <img src="{{ asset('assets/front/img/logo.png') }}" alt="BotMe" class="logoloz animated bounce">
                     <ul class="nav navbar-nav navbar-left">
                         <li><a href="{{ path('homepage') }}#carousel-bg" class="waves-effect waves-light">Accueil</a></li>
                         <li><a href="{{ path('homepage') }}#about-me" class="waves-effect waves-light">A propos</a></li>
@@ -60,11 +60,11 @@
                     </ul>
                     <ul class="nav navbar-nav navbar-right">
                         <li>
-                            <a class="waves-effect waves-light signup">
+                            <a class="waves-effect waves-light signup alert-target">
                                 <i class="fa fa-key"></i> S'inscrire</a>
                         </li>
                         <li>
-                            <a class="waves-effect waves-light login">
+                            <a class="waves-effect waves-light login alert-target">
                                 <i class="fa fa-lock"></i> Connection</a>
                         </li>
                     </ul>
@@ -148,6 +148,7 @@
 
         <!--Form without header-->
         <div id="mdpmiss" class="card">
+            <button type="button" class="btn btn-primary returnRes"><i class="fa fa-chevron-left"> </i></button>
             <div class="card-body mx-4">
                 <!--Header-->
                 <div class="text-center">
@@ -166,6 +167,12 @@
             </div>
         </div>
         <!--/Form without header-->
+
+        <div class="card info-color text-center z-depth-2" id="infoEchap">
+            <div class="card-body">
+                <p class="white-text mb-0"><i class="fa fa-info-circle"></i> Appuyez sur ECHAP pour fermer les menus flottants.</p>
+            </div>
+        </div>
 
         <!--/.Navigation-->
         {% block body %}{% endblock %}
@@ -224,19 +231,19 @@
 
         <!-- Section: Portfolio -->
         <!-- JQuery -->
-        <script type="text/javascript" src="{{ asset('assets/js/jquery.min.js') }}"></script>
+        <script type="text/javascript" src="{{ asset('assets/front/js/jquery.min.js') }}"></script>
 
         <!-- Bootstrap core JavaScript -->
-        <script type="text/javascript" src="{{ asset('assets/js/bootstrap.min.js') }}"></script>
+        <script type="text/javascript" src="{{ asset('assets/front/js/bootstrap.min.js') }}"></script>
 
         <!-- Material Design Bootstrap -->
-        <script type="text/javascript" src="{{ asset('assets/js/mdb.js') }}"></script>
+        <script type="text/javascript" src="{{ asset('assets/front/js/mdb.js') }}"></script>
 
         <!-- Smooth scroll -->
-        <script type="text/javascript" src="{{ asset('assets/js/smooth-scroll.js') }}"></script>
+        <script type="text/javascript" src="{{ asset('assets/front/js/smooth-scroll.js') }}"></script>
 
         <!-- JS homepage -->
-        <script type="text/javascript" src="{{ asset('assets/js/main.js') }}"></script>
+        <script type="text/javascript" src="{{ asset('assets/front/js/main.js') }}"></script>
 
         <!-- WOW effect -->
         <script>

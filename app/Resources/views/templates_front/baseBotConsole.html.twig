@@ -10,28 +10,28 @@
 
     <title>{% block title %}BotMe !{% endblock %}</title>
     {% block stylesheets %}{% endblock %}
-    <link rel="icon" type="image/x-icon" href="{{ asset('assets/img/favicon.png') }}" />
+    <link rel="icon" type="image/x-icon" href="{{ asset('assets/front/img/favicon.png') }}" />
 
     <!-- Material Design Icons -->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-
+    
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
 
     <!-- Bootstrap core CSS -->
-    <link href="{{ asset('assets/css/bootstrap.min.css') }}" rel="stylesheet">
+    <link href="{{ asset('assets/front/css/bootstrap.min.css') }}" rel="stylesheet">
 
     <!-- Material Design Bootstrap Compiled -->
-    <link href="{{ asset('assets/css/mdb.css') }}" rel="stylesheet">
+    <link href="{{ asset('assets/front/css/mdb.css') }}" rel="stylesheet">
 
     <!-- Template style -->
-    <link href="{{ asset('assets/css/style.css') }}" rel="stylesheet">
+    <link href="{{ asset('assets/front/css/style.css') }}" rel="stylesheet">
 
     <!-- Form connexion & sign up style -->
-    <link href="{{ asset('assets/css/forms.css') }}" rel="stylesheet">
+    <link href="{{ asset('assets/front/css/forms.css') }}" rel="stylesheet">
 
     <!-- CSS for Basic Console Bot -->
-    <link href="{{ asset('assets/css/bots/basicConsole.css') }}" rel="stylesheet"> 
+    <link href="{{ asset('assets/front/css/bots/basicConsole.css') }}" rel="stylesheet"> 
 
 </head>
 
@@ -49,22 +49,22 @@
             </div>
 
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                <img src="{{ asset('assets/img/logo.png') }}" alt="BotMe" class="logoloz animated bounce">
+                <img src="{{ asset('assets/front/img/logo.png') }}" alt="BotMe" class="logoloz animated bounce">
                 <ul class="nav navbar-nav navbar-left">
                     <li>
-                        <a href="{{ path('homepage') }}#carousel-bg" class="waves-effect waves-light">Accueil</a>
+                        <a href="{{ path('index') }}#carousel-bg" class="waves-effect waves-light">Accueil</a>
                     </li>
                     <li>
-                        <a href="{{ path('homepage') }}#about-me" class="waves-effect waves-light">A propos</a>
+                        <a href="{{ path('index') }}#about-me" class="waves-effect waves-light">A propos</a>
                     </li>
                     <li>
-                        <a href="{{ path('homepage') }}#blog" class="waves-effect waves-light">Chatbots</a>
+                        <a href="{{ path('index') }}#blog" class="waves-effect waves-light">Chatbots</a>
                     </li>
                     <li>
-                        <a href="{{ path('homepage') }}#portfolio" class="waves-effect waves-light">Nos secteurs</a>
+                        <a href="{{ path('index') }}#portfolio" class="waves-effect waves-light">Nos secteurs</a>
                     </li>
                     <li>
-                        <a href="{{ path('homepage') }}#contact" class="waves-effect waves-light">Contact</a>
+                        <a href="{{ path('index') }}#contact" class="waves-effect waves-light">Contact</a>
                     </li>
 
                 </ul>
@@ -143,16 +143,16 @@
     <!--/. Parallax -->
 
     <!-- JQuery -->
-    <script type="text/javascript" src="{{ asset('assets/js/jquery.min.js') }}"></script>
+    <script type="text/javascript" src="{{ asset('assets/front/js/jquery.min.js') }}"></script>
 
     <!-- Bootstrap core JavaScript -->
-    <script type="text/javascript" src="{{ asset('assets/js/bootstrap.min.js') }}"></script>
+    <script type="text/javascript" src="{{ asset('assets/front/js/bootstrap.min.js') }}"></script>
 
     <!-- Material Design Bootstrap -->
-    <script type="text/javascript" src="{{ asset('assets/js/mdb.js') }}"></script>
+    <script type="text/javascript" src="{{ asset('assets/front/js/mdb.js') }}"></script>
 
     <!-- Smooth scroll -->
-    <script type="text/javascript" src="{{ asset('assets/js/smooth-scroll.js') }}"></script>
+    <script type="text/javascript" src="{{ asset('assets/front/js/smooth-scroll.js') }}"></script>
 
     <!-- CDN's -->
     <script src="https://code.jquery.com/jquery-3.1.0.js"></script>
@@ -226,7 +226,7 @@
                 "<h4>Carte d'embarquement</h4>\n" +
                 "<span>Boarding Pass</span>\n" +
                 "</div>\n" +
-                "<img src='img/air.png' class='air'>\n" +
+                "<img src='{{asset('assets/front/img/bot/air.png')}}' class='air'>\n" +
                 "<div class='col-md-12' style='padding: 10px 24px;text-align: left;'>\n" +
                 "<span>Classe : <strong id='classes'>" + classeB + "</strong></span><br>\n" +
                 "<span>Prix total : <strong>" + data[0].itineraries[0].flightProducts[0].price.totalPrice + " € </strong> <i>( Ce billet prend en compte " + data[0].itineraries[0].flightProducts[0].passengers.length + " personne(s), calculé par Air France )</i> </span><br>\n" +
@@ -271,7 +271,7 @@
                     "<h4>Carte d'embarquement</h4>\n" +
                     "<span>Boarding Pass</span>\n" +
                     "</div>\n" +
-                    "<img src='img/air.png' class='air'>\n" +
+                    "<img src='{{asset('assets/front/img/bot/air.png')}}' class='air'>\n" +
                     "<div class='col-md-12' style='padding: 10px 24px;text-align: left;'>\n" +
                     "<span>Classe : <strong id='classes'>" + classeB + "</strong></span><br>\n" +
                     "<span>Prix total : <strong id='prix'>" + data[0].itineraries[i].flightProducts[0].price.totalPrice + " € </strong> <i>( Ce billet prend en compte " + data[0].itineraries[i].flightProducts[0].passengers.length + " personne(s), calculé par Air France )</i></span><br>\n" +
