@@ -1,0 +1,286 @@
+/*********************
+MDBootstrap
+**********************/
+
+html,
+body {
+    height: 100%;
+    background-color: #212121;
+}
+
+
+/* Carousel */
+
+.carousel {
+    height: 100%;
+}
+.carousel .item {
+    height: 100%;
+}
+
+.carousel .active {
+    height: 100%;
+}
+
+.carousel-inner {
+    height: 100%;
+}
+
+#carousel-bg .item video {
+    opacity: 0.4;
+}
+.carousel-full-bg .carousel-caption  {
+    margin-bottom: 22%;
+    margin-top: 22%;
+}
+@media only screen and (max-width: 767px) {
+    .carousel-full-bg .carousel-caption {
+        margin-bottom: 25%;
+    }
+}
+/* Footer normalize */
+
+footer.page-footer {
+    margin-top: 0;
+}
+/* Navbar normalize */
+
+.navbar {
+    z-index: 999;
+}
+
+@media only screen and (max-width: 767px) {
+    .navbar-header,
+    .navbar-collapse {
+        background-color: #3E4551;
+    }
+}
+
+@media only screen and (min-width: 700px) {
+    .navbar-nav li a {
+        font-size: 0.75em;
+    }
+}
+
+@media only screen and (min-width: 800px) {
+    .navbar-nav li a {
+        font-size: 1em;
+    }
+}
+
+.top-nav-collapse {
+    /* background-color: #3E4551; */
+    background-color:#335a8699;
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+}
+
+/* Typography */
+
+@media only screen and (max-width: 600px) {
+    h2,
+    h3 {
+        font-size: 2em
+    }
+}
+
+/* Sections */
+
+.section-white .avatar-ws {
+    width: 100%;
+    max-width: 250px;
+    margin-bottom: 2em
+}
+
+.section-white-0 {
+    margin: 0;
+    padding: 0;
+}
+
+.section-white .contact-data li p {
+    text-align: center;
+}
+
+/* Tiled gallery */
+
+.tiled-gallery .tile-1 {
+    background-image: url('../img/activities/bat.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.tiled-gallery .tile-2 {
+    background-image: url(http://mdbootstrap.com/wp-content/uploads/2015/10/places899.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.tiled-gallery .tile-3 {
+    background-image: url('../img/activities/bank.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.tiled-gallery .tile-5 {
+    background-image: url('../img/activities/info.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.tiled-gallery .tile-6 {
+    background-image: url(http://mdbootstrap.com/wp-content/uploads/2015/10/kfi7dark.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.tiled-gallery .tile-8 {
+    background-image: url(http://mdbootstrap.com/wp-content/uploads/2015/10/food899.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/* Parallax */
+
+#par-about-me {
+    background-image: url(http://mdbootstrap.com/wp-content/uploads/2015/10/videoaboutme-dark.jpg);
+}
+
+
+#par-special-offer {
+    background-image: url('../img/special/spe.jpg');
+}
+
+#blog {
+    background-image: url('../img/choose_bot/background.jpg');
+}
+
+.parallax .avatar-ws {
+    margin-bottom: 3em;
+    width: 20%;
+    opacity: 0.8
+}
+
+.parallax {
+    color: #fff;
+}
+.parallax-container .container-small img {
+    opacity: 1;
+}
+
+.parallax-image {
+    opacity: 0.4
+}
+.parallax-container h3 {
+    margin-bottom: 1em;
+}
+
+.parallax-container .avatar-ws {
+    margin-bottom: 3em;
+    width: 20%;
+    opacity: 0.8
+}
+
+.parallax-container .container-small img {
+    opacity: 1;
+}
+
+/* Lightbox Gallery */
+
+.light-box-gallery .margin-top {
+    margin-top: 10em;
+}
+
+.light-box-gallery .portfolio-item {
+    margin: 0;
+    padding: 0;
+}
+
+/* Animations */
+.carousel-caption {
+    animation-duration: 4s;
+    animation-delay: 0.3s;
+
+}
+
+/* --------------------------------------------- */
+/* --------------------------------------------- */
+/* --------------------------------------------- */
+/* --------------------------------------------- */
+/* OTHER */
+/* --------------------------------------------- */
+/* --------------------------------------------- */
+/* --------------------------------------------- */
+/* --------------------------------------------- */
+
+.botmecolor{
+    color: #006064;
+}
+
+.testimonial-card {
+    background: #fff;
+}
+
+.input-field .prefix.active{
+    color: #335a8666;
+}
+
+.email-bg{
+    background-color: #335a8666;
+}
+
+input[type=text]:focus:not([readonly])+label,
+input[type=password]:focus:not([readonly])+label,
+input[type=email]:focus:not([readonly])+label,
+input[type=url]:focus:not([readonly])+label,
+input[type=time]:focus:not([readonly])+label,
+input[type=date]:focus:not([readonly])+label,
+input[type=datetime-local]:focus:not([readonly])+label,
+input[type=tel]:focus:not([readonly])+label,
+input[type=number]:focus:not([readonly])+label,
+input[type=search-md]:focus:not([readonly])+label,
+textarea.materialize-textarea:focus:not([readonly])+label {
+    color: #335a8666;
+}
+
+.new-control .fa {
+    background-color: unset;
+}
+
+.navbar{
+    min-height: 74px;
+}
+
+.logoloz{
+    position: absolute;
+    margin-left: 50px;
+    top: 3px;
+}
+
+.navbar .navbar-collapse,
+.navbar .navbar-form {
+    border-color: rgba(0, 0, 0, 0.1);
+    margin-top: 9px;
+}
+
+.section-dark {
+    background-color: #335a8666;
+}
+
+.elegant-card .card-footer {
+    background-color: #335a8666;
+}
+
+.elegant-card .card-up {
+    max-height: 265px;
+}
+
+.asterix{
+    font-size: 12px;
+}
+
+#infoEchap {
+    display: none;
+    position: fixed;
+    bottom: 0;
+    left: 1%;
+    z-index: 5;
+}

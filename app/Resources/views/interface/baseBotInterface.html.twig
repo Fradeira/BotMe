@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1"> 
+        
+        {# HERE = REFERENCEMENT #}
+        
+        <title>{% block title %}BotMe !{% endblock %}</title>
+        {% block stylesheets %}{% endblock %}
+        <link rel="icon" type="image/x-icon" href="{{ asset('assets/front/img/favicon.png') }}" />
+        
+        <!-- Material Design Icons -->
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        
+        <!-- Font Awesome -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+        
+        <!-- Bootstrap core CSS -->
+        <link href="{{ asset('assets/front/css/bootstrap.min.css') }}" rel="stylesheet">
+        
+        <!-- Material Design Bootstrap Compiled -->
+        <link href="{{ asset('assets/front/css/mdb.css') }}" rel="stylesheet">
+        
+        <!-- Template style -->
+        <link href="{{ asset('assets/front/css/bots/v_mlp.css') }}" rel="stylesheet">
+    </head>
+    <body>
+        <!--Navigation-->
+        <nav class="navbar navbar-dark primary-color text-center popUp" style="margin:unset;padding: 13px 0;" id="navOne">
+            <span class="navbar-brand" style="float:none;">
+                 La page de votre chatbot n'est actuellement pas connectée. Enregistrez votre chatbot pour le mettre à jour puis Essayez le.
+                <a href="#" class="closePop">
+                    <i class="fa fa-times"></i>
+                </a>
+            </span>
+        </nav>
+        <nav class="navbar navbar-light white lighten-4 noMargin" role="navigation" id="navTwo">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                </div>
+        
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                    <ul class="nav navbar-nav navbar-left">
+                        <li>
+                            <a href="{{ path('index') }}" class="btn waves-effect waves-light colorB" style="margin-right:unset;margin-right:unset;box-shadow: unset;"
+                             data-toggle="tooltip" data-placement="bottom" title="Tooltip on bottom">
+                                <i class="fa fa-long-arrow-left"></i>
+                            </a>
+                            
+                        </li>
+                        <li>
+                            <a class="btn waves-effect waves-light colorB" style="margin-left: unset;box-shadow: unset;">
+                                <i class="fa fa-file"></i> Création de chatbot
+                            </a>
+                        </li>
+                    </ul>
+                    <ul class="nav navbar-nav navbar-right">
+                        <li>
+                            <a class="btn btn-default waves-effect waves-light">
+                                <i class="fa fa-refresh" aria-hidden="true"></i>
+                                Enregistrer et rafraichir
+                            </a>
+                        </li>
+                        <li>
+                            <a class="btn btn-info btn-rounded waves-effect waves-light">
+                                <i class="fa fa-commenting-o"></i> Essayez ce chatbot
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        
+        <nav class="navbar navbar-light white lighten-4 secondMenu noMargin" role="navigation" id="navTree">
+            <div class="container-fluid speCo">
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                    <ul class="nav navbar-nav navbar-left">
+                        <li>
+                            <a href="{{ path('creation_bot') }}" class="btn waves-effect waves-light blue">
+                                <i class="fa fa-terminal"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="btn waves-effect waves-light blue">
+                                <i class="fa fa-cloud"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="{{ path('analyze') }}" class="btn waves-effect waves-light blue">
+                                <i class="fa fa-bar-chart"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="btn waves-effect waves-light blue">
+                                <i class="fa fa-cogs"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="btn waves-effect waves-light blue">
+                                <i class="fa fa-user"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <!--Navigation-->
+        <div class="bodyStyle">
+            {% block body %}{% endblock %} {% block javascripts %}{% endblock %}
+        </div>
+    </body>
+
+    <!-- Popper -->
+    <script type="text/javascript" src="{{ asset('assets/front/js/popper.min.js') }}"></script>
+
+    <!-- JQuery -->
+    <script type="text/javascript" src="{{ asset('assets/front/js/jquery.min.js') }}"></script>
+    
+    <!-- Bootstrap core JavaScript -->
+    <script type="text/javascript" src="{{ asset('assets/front/js/bootstrap.min.js') }}"></script>
+    
+    <!-- Material Design Bootstrap -->
+    <script type="text/javascript" src="{{ asset('assets/front/js/mdb.js') }}"></script>
+
+    <!-- Main JS -->
+    <script type="text/javascript" src="{{ asset('assets/front/js/version_mlp/main.js') }}"></script>
+    <script type="text/javascript" src="{{ asset('assets/front/js/version_mlp/functions/v_mlp.js') }}"></script>
+</html>
