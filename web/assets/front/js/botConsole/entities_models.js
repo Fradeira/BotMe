@@ -316,8 +316,6 @@ function checkAeroport(message, point) {
     var str = (message.toUpperCase()).split(wordSeparator);
     var strLow = (message.toLowerCase()).split(wordSeparator);
     var messageLength = str.length;
-    console.log("STR FIRST :", str);
-    console.log("STR TWO :", strLow);
     
     for (var i = 0; i < messageLength; i++) {
         if (locations['departure'].length == 0 || locations['arrival'].length == 0) {
@@ -346,10 +344,6 @@ function checkAeroport(message, point) {
                     || dataStorage.airportsListFr[k][3] != undefined && dataStorage.airportsListFr[k][3] == str[i]) {
                     locations[point].push(dataStorage.airportsListFr[k][0]);
 
-                    // console.log("direction :", dataStorage.directionalEntities[strLow[i + 1].toStrLowing().toUpperCase()]);
-                    // console.log("direction :", dataStorage.directionalEntities[strLow[i].toStrLowing().toUpperCase()]);
-                    // console.log("direction :", dataStorage.directionalEntities[strLow[i - 1].toStrLowing().toUpperCase()]);
-                    
                     if (point == 'departure' && remindConfig['arrival'] == "") {
                         for (var o = 0; o < messageLength; o++){
                             if (strLow[o + 1] != undefined && dataStorage.directionalEntities[strLow[o + 1]] != undefined) {
@@ -376,8 +370,6 @@ function checkAeroport(message, point) {
     locations = determineDirection(locations, dataStorage.directionalEntities[direction]);
     remindConfig['departure'] = locations['departure'];
     remindConfig['arrival'] = locations['arrival'];
-    console.log("DEPART :", locations['departure']);
-    console.log("ARRIVEE :", locations['arrival']);
     
 }
 //------------------------------------------------------------------------------
