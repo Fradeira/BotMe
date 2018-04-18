@@ -7,32 +7,69 @@
     <meta name="author" content="Kevin Morand">
     <link rel="icon" type="image/png" href="{{ asset('assets/img/fav.ico')}}">
 
-    <title>{% block title %}{{ 'website_name' }}{% endblock %}</title>
+    <title>{% block title %}Botme - Administration{% endblock %}</title>
 
     {% block stylesheets %}
-        <!-- Bootstrap Core CSS -->
+        <!-- Material Design Icons -->
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+        <!-- Font Awesome -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+
+        <!-- Bootstrap core CSS -->
         <link href="{{ asset('assets/back/css/bootstrap.min.css') }}" rel="stylesheet">
 
-        <!-- Custom CSS -->
+        <!-- Material Design Bootstrap Compiled -->
+        <link href="{{ asset('assets/back/css/mdb.css') }}" rel="stylesheet">
+
+        <!-- Template style -->
         <link href="{{ asset('assets/back/css/style.css') }}" rel="stylesheet">
 
-        <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-        <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-        <!--[if lt IE 9]>
-        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-        <![endif]-->
+        <!-- Form connexion & sign up style -->
+        <link href="{{ asset('assets/back/css/forms.css') }}" rel="stylesheet">
+
+        <!-- CSS Compiled Mdb -->
+        <link href="{{ asset('assets/back/css/compiled.css') }}" rel="stylesheet">
     {% endblock %}
 </head>
 
 <body>
 
+    <!--Main Navigation-->
+    <header>
+        <!--Navigation-->
+        <nav class="navbar fixed-top navbar-expand-lg navbar-dark blue scrolling-navbar" role="navigation">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                </div>
+
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                    <img src="{{ asset('assets/front/img/logo.png') }}" alt="BotMe" class="logoloz animated bounce">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li><a href="{{ path('dashboard') }}" class="waves-effect waves-light">Dashboard</a></li>
+                        <li>
+                            <a class="nav-link"><i class="fa fa-user"></i> <span class="clearfix d-none d-sm-inline-block">Account</span></a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+    </header>
+    <!--Main Navigation-->
 
 
 
-    <!-- **********************************************************************************************************************************************************
-    MAIN CONTENT
-    *********************************************************************************************************************************************************** -->
+
+<!-- **********************************************************************************************************************************************************
+MAIN CONTENT
+*********************************************************************************************************************************************************** -->
     <!--main content start-->
     {% block body %}
     {% endblock %}
@@ -43,10 +80,10 @@
 
 {% block javascripts %}
     <!-- jQuery -->
-    <script src="{{ asset('assets/back/js/jquery/jquery.min.js') }}"></script>
+    <script src="{{ asset('assets/back/js/jquery.min.js') }}"></script>
 
     <!-- Bootstrap Core JavaScript -->
-    <script src="{{ asset('assets/back/js/bootstrap/bootstrap.min.js') }}"></script>
+    <script src="{{ asset('assets/back/js/bootstrap.min.js') }}"></script>
 
     <!-- Custom Theme JavaScript -->
     <script src="{{ asset('assets/back/js/main.js') }}"></script>
