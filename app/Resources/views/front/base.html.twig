@@ -65,7 +65,7 @@
                         </li>
                         <li>
                             <a class="waves-effect waves-light login alert-target">
-                                <i class="fa fa-lock"></i> Connection</a>
+                                <i class="fa fa-lock"></i> Connexion</a>
                         </li>
                     </ul>
                 </div>
@@ -82,30 +82,37 @@
                     </h3>
                 </div>
                 <!--Body-->
-                <div class="md-form">
-                    <input type="text" id="Form-name1" class="form-control">
-                    <label for="Form-name1">Votre nom</label>
-                </div>
-                <div class="md-form">
-                    <input type="text" id="Form-email1" class="form-control">
-                    <label for="Form-email1">Votre email</label>
-                </div>
-                <div class="md-form pb-3">
-                    <input type="password" id="Form-pass1" class="form-control">
-                    <label for="Form-pass1">Votre mot de passe</label>
-                </div>
-                <div class="md-form pb-3">
-                    <input type="password" id="Form-pass1" class="form-control">
-                    <label for="Form-pass1">Confirmez votre mot de passe</label>
-                </div>
-                <div class="form-check mr-3">
-                    <input class="form-check-input" type="checkbox" id="inlineFormCheckbox1">
-                    <label class="form-check-label" for="inlineFormCheckbox1">J'acceptes les <a href="">CGV et les CGU de BotMe</a></label>
-                </div>
-                <br>
-                <div class="text-center mb-3">
-                    <a href="#" class="btn blue-gradient btn-block btn-rounded z-depth-1a">Je m'inscris</a>
-                </div>
+                {% block fos_user_content %}
+                {% if error is defined %}
+                    <div>{{error.messageKey|trans(error.messageData, 'security')}}</div>
+                {% endif %}
+
+                <form name="fos_user_registration_form" class="fos_user_registration_register" action="{{ path("fos_user_registration_register") }}" method="post">
+                    <div class="md-form">
+                        <input type="text" id="fos_user_registration_form_username" name="fos_user_registration_form[username]" class="form-control" maxlength="180" pattern=".{2,}">
+                        <label for="fos_user_registration_form_username">Pseudo</label>
+                    </div>
+                    <div class="md-form">
+                        <input type="text" id="fos_user_registration_form_email" name="fos_user_registration_form[email]" class="form-control">
+                        <label for="fos_user_registration_form_email">Votre email</label>
+                    </div>
+                    <div class="md-form pb-3">
+                        <input type="password" id="Form-pass1" class="form-control" id="fos_user_registration_form_plainPassword_first" name="fos_user_registration_form[plainPassword][first]" autocomplete="new-password" aria-autocomplete="list">
+                        <label for="fos_user_registration_form_plainPassword_first">Votre mot de passe</label>
+                    </div>
+                    <div class="md-form pb-3">
+                        <input type="password" id="fos_user_registration_form_plainPassword_second" name="fos_user_registration_form[plainPassword][second]" required="required" autocomplete="new-password" class="form-control">
+                        <label for="fos_user_registration_form_plainPassword_second">Confirmez votre mot de passe</label>
+                    </div>
+                    <input type="hidden" id="fos_user_registration_form__token" name="token" value="{{ csrf_token('authenticate') }}">
+                    <div class="form-check mr-3">
+                        <label class="form-check-label" for="inlineFormCheckbox1">En vous inscrivant vous acceptez les <a href="#">CGV et les CGU de BotMe</a></label>
+                    </div>
+                    <br>
+                    <div class="text-center mb-3">
+                        <input type="submit" class="btn blue-gradient btn-block btn-rounded z-depth-1a" name="_submit" value="Je m'inscris" />
+                    </div>
+                </form>
             </div>
         
         </div>
@@ -117,24 +124,38 @@
                 <!--Header-->
                 <div class="text-center">
                     <h3 class="dark-grey-text mb-5">
-                        <strong>Connection</strong>
+                        <strong>Connexion</strong>
                     </h3>
                 </div>
                 <!--Body-->
-                <div class="md-form">
-                    <input type="text" id="Form-email1" class="form-control">
-                    <label for="Form-email1">Votre email</label>
-                </div>
-                <div class="md-form pb-3">
-                    <input type="password" id="Form-pass1" class="form-control">
-                    <label for="Form-pass1">Votre mot de passe</label>
-                    <p class="font-small blue-text d-flex justify-content-end">
-                        <a class="blue-text ml-1" id="passmiss">Mot de passe perdu ?</a>
-                    </p>
-                </div>
-                <div class="text-center mb-3">
-                    <button type="button" class="btn blue-gradient btn-block btn-rounded z-depth-1a">Connection</button>
-                </div>
+                    {% if error is defined %}
+                        <div>{{error.messageKey|trans(error.messageData, 'security')}}</div>
+                    {% endif %}
+
+                    <form action="{{ path("fos_user_security_check") }}" method="post">
+                        <input type="hidden" name="_csrf_token" value="{{ csrf_token('authenticate') }}" />
+
+                        <div class="md-form">
+                            <input type="text" id="username" name="_username" required="required" class="form-control" />
+                            <label for="username">Pseudo</label>
+                        </div>
+
+                        <div class="md-form pb-3">
+                            <input type="password" id="password" name="_password" required="required" class="form-control" />
+                            <label for="password">Mot de passe</label>
+                            <p class="font-small blue-text d-flex justify-content-end">
+                                <a class="blue-text ml-1" id="passmiss">Mot de passe perdu ?</a>
+                            </p>
+                        </div>
+
+                        <div>
+                            <label for="remember_me">Se souvenir</label>
+                            <input type="checkbox" id="remember_me" name="_remember_me" value="on" />
+                        </div>
+
+                        <input type="submit" class="btn blue-gradient btn-block btn-rounded z-depth-1a" name="_submit" value="Connexion" />
+                    </form>
+                {% endblock fos_user_content %}
             </div>
             <!--Footer-->
             <div class="modal-footer mx-5 pt-3 mb-1">
